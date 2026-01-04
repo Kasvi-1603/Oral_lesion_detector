@@ -122,3 +122,4 @@ class ImageProcessor:
         # Currently just returns the same image
         return image_array
 
+

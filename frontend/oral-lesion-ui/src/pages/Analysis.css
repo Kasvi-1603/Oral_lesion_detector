@@ -95,17 +95,63 @@
   padding: 2.5rem;
   border-radius: 16px;
   margin: 2rem 0;
+  border-left: 5px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.prediction-card.benign {
+  border-left-color: #10b981;
+  background: linear-gradient(to right, #f0fdf4 0%, #f8f9fa 20%);
+}
+
+.prediction-card.malignant {
+  border-left-color: #ef4444;
+  background: linear-gradient(to right, #fef2f2 0%, #f8f9fa 20%);
 }
 
 .main-prediction {
   text-align: center;
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prediction-badge {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.prediction-card.benign .prediction-badge {
+  color: #10b981;
+  border: 3px solid #10b981;
+}
+
+.prediction-card.malignant .prediction-badge {
+  color: #ef4444;
+  border: 3px solid #ef4444;
 }
 
 .main-prediction h3 {
   font-size: 2.5rem;
-  color: #667eea;
   margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.prediction-card.benign .main-prediction h3 {
+  color: #10b981;
+}
+
+.prediction-card.malignant .main-prediction h3 {
+  color: #ef4444;
 }
 
 .confidence {
@@ -124,53 +170,140 @@
 
 .confidence-fill {
   height: 100%;
-  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
   transition: width 0.8s ease;
+}
+
+.confidence-fill.benign {
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+}
+
+.confidence-fill.malignant {
+  background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+}
+
+/* Binary Probabilities Display */
+.binary-probabilities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.prob-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prob-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.benign-card {
+  border-left: 4px solid #10b981;
+}
+
+.malignant-card {
+  border-left: 4px solid #ef4444;
+}
+
+.prob-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.prob-icon {
+  font-size: 1.5rem;
+}
+
+.benign-card .prob-icon {
+  color: #10b981;
+}
+
+.malignant-card .prob-icon {
+  color: #ef4444;
+}
+
+.prob-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.prob-percentage {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.benign-card .prob-percentage {
+  color: #10b981;
+}
+
+.malignant-card .prob-percentage {
+  color: #ef4444;
+}
+
+.prob-bar-mini {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.prob-fill-mini {
+  height: 100%;
+  transition: width 0.8s ease;
+}
+
+.prob-fill-mini.benign {
+  background: #10b981;
+}
+
+.prob-fill-mini.malignant {
+  background: #ef4444;
+}
+
+/* Technical Details */
+.technical-details {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.technical-details h4 {
+  font-size: 1.1rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.technical-details p {
+  color: #4a5568;
+  margin: 0.5rem 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+}
+
+.tech-note {
+  font-family: inherit !important;
+  font-size: 0.9rem !important;
+  color: #718096 !important;
+  margin-top: 1rem !important;
+  font-style: italic;
 }
 
 .results h4 {
   margin: 2rem 0 1rem 0;
   color: #333;
   font-size: 1.3rem;
-}
-
-.probabilities {
-  margin-top: 1.5rem;
-}
-
-.prob-item {
-  margin: 1.2rem 0;
-}
-
-.class-name {
-  display: inline-block;
-  width: 60%;
-  font-weight: 500;
-  color: #333;
-  font-size: 1.1rem;
-}
-
-.prob-value {
-  display: inline-block;
-  width: 15%;
-  text-align: right;
-  color: #667eea;
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-.prob-bar {
-  height: 10px;
-  background: #e0e0e0;
-  border-radius: 5px;
-  overflow: hidden;
-  margin-top: 0.5rem;
-}
-
-.prob-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-  transition: width 0.8s ease;
 }
 
 .disclaimer {
@@ -194,12 +327,20 @@
     font-size: 2rem;
   }
 
-  .class-name {
-    width: 50%;
+  .binary-probabilities {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .prob-value {
-    width: 20%;
+  .prediction-badge {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .main-prediction h3 {
+    font-size: 2rem;
   }
 }
+
 

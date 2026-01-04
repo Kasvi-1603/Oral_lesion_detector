@@ -102,38 +102,21 @@ class ModelService:
                 malignant_prob = float(predictions[0][0] if len(predictions.shape) > 1 else predictions[0])
                 benign_prob = 1.0 - malignant_prob
                 
-                # Map to multi-class output for frontend compatibility
-                # If malignant (>0.5), assign to high-risk classes
-                # If benign (<0.5), assign to low-risk classes
+                # Determine predicted class
                 if malignant_prob > 0.5:
-                    # High confidence malignant -> Oral Squamous Cell Carcinoma
-                    predicted_class = "Oral Squamous Cell Carcinoma"
+                    predicted_class = "Malignant"
                     confidence = malignant_prob
-                    
-                    # Distribute probabilities to make sense
-                    class_probabilities = {
-                        "Normal": benign_prob * 0.5,
-                        "Leukoplakia": benign_prob * 0.3,
-                        "Erythroplakia": malignant_prob * 0.3,
-                        "Ulcer": benign_prob * 0.2,
-                        "Oral Squamous Cell Carcinoma": malignant_prob * 0.7
-                    }
                 else:
-                    # Benign -> Normal
-                    predicted_class = "Normal"
+                    predicted_class = "Benign"
                     confidence = benign_prob
-                    
-                    # Distribute probabilities
-                    class_probabilities = {
-                        "Normal": benign_prob * 0.7,
-                        "Leukoplakia": benign_prob * 0.2,
-                        "Erythroplakia": malignant_prob * 0.3,
-                        "Ulcer": benign_prob * 0.1,
-                        "Oral Squamous Cell Carcinoma": malignant_prob * 0.7
-                    }
                 
-                logger.info(f"Binary model prediction: {'Malignant' if malignant_prob > 0.5 else 'Benign'} ({malignant_prob:.2%})")
-                logger.info(f"Mapped to: {predicted_class} ({confidence:.2%})")
+                # Binary classification probabilities
+                class_probabilities = {
+                    "Benign": benign_prob,
+                    "Malignant": malignant_prob
+                }
+                
+                logger.info(f"Binary prediction: {predicted_class} ({confidence:.2%})")
             
             else:
                 # Multi-class classification model

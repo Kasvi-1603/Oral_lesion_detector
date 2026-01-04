@@ -56,9 +56,12 @@ function Analysis() {
 
           {prediction && !loading && (
             <div className="results fade-in">
-              <h2>📊 Prediction Results</h2>
-              <div className="prediction-card">
+              <h2>📊 Analysis Results</h2>
+              <div className={`prediction-card ${prediction.prediction === "Malignant" ? "malignant" : "benign"}`}>
                 <div className="main-prediction">
+                  <div className="prediction-badge">
+                    {prediction.prediction === "Benign" ? "✓" : "⚠"}
+                  </div>
                   <h3>{prediction.prediction}</h3>
                   <p className="confidence">
                     Confidence: {(prediction.confidence * 100).toFixed(2)}%
@@ -67,26 +70,55 @@ function Analysis() {
 
                 <div className="confidence-bar">
                   <div
-                    className="confidence-fill"
+                    className={`confidence-fill ${prediction.prediction === "Malignant" ? "malignant" : "benign"}`}
                     style={{ width: `${prediction.confidence * 100}%` }}
                   ></div>
                 </div>
 
-                <h4>All Class Probabilities:</h4>
-                <div className="probabilities">
-                  {Object.entries(prediction.probabilities).map(([className, prob]) => (
-                    <div key={className} className="prob-item">
-                      <span className="class-name">{className}</span>
-                      <span className="prob-value">{(prob * 100).toFixed(2)}%</span>
-                      <div className="prob-bar">
-                        <div
-                          className="prob-fill"
-                          style={{ width: `${prob * 100}%` }}
-                        ></div>
-                      </div>
+                <div className="binary-probabilities">
+                  <div className="prob-card benign-card">
+                    <div className="prob-header">
+                      <span className="prob-icon">✓</span>
+                      <span className="prob-label">Benign</span>
                     </div>
-                  ))}
+                    <div className="prob-percentage">
+                      {(prediction.probabilities.Benign * 100).toFixed(2)}%
+                    </div>
+                    <div className="prob-bar-mini">
+                      <div 
+                        className="prob-fill-mini benign"
+                        style={{ width: `${prediction.probabilities.Benign * 100}%` }}
+                      ></div>
+                    </div>
+                  </div>
+
+                  <div className="prob-card malignant-card">
+                    <div className="prob-header">
+                      <span className="prob-icon">⚠</span>
+                      <span className="prob-label">Malignant</span>
+                    </div>
+                    <div className="prob-percentage">
+                      {(prediction.probabilities.Malignant * 100).toFixed(2)}%
+                    </div>
+                    <div className="prob-bar-mini">
+                      <div 
+                        className="prob-fill-mini malignant"
+                        style={{ width: `${prediction.probabilities.Malignant * 100}%` }}
+                      ></div>
+                    </div>
+                  </div>
                 </div>
+
+                {prediction.raw_score !== undefined && (
+                  <div className="technical-details">
+                    <h4>Technical Details</h4>
+                    <p>Model Output Score: {prediction.raw_score.toFixed(4)}</p>
+                    <p className="tech-note">
+                      Binary classification model trained on oral lesion images. 
+                      Score &gt; 0.5 indicates malignant lesion.
+                    </p>
+                  </div>
+                )}
               </div>
 
               <div className="disclaimer">
@@ -103,4 +135,5 @@ function Analysis() {
 }
 
 export default Analysis;
+
 

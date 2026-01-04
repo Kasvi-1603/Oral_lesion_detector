@@ -1,5 +1,5 @@
 // API Service for communicating with backend
-const API_BASE_URL = 'http://localhost:8888';
+const API_BASE_URL = 'http://localhost:8000';
 
 export const predictLesion = async (imageFile) => {
   const formData = new FormData();
