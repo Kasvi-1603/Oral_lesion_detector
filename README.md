@@ -1,11 +1,5 @@
 # 🦷 Oral Lesion Classifier
 
-AI-powered web application for binary classification of oral lesions using deep learning.
-
-![Python](https://img.shields.io/badge/Python-3.10+-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.128.0-green)
-![React](https://img.shields.io/badge/React-18.0-blue)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.20.0-orange)
 
 ---
 
@@ -36,30 +30,6 @@ The project demonstrates practical integration of deep learning models in web ap
 - **Binary CNN Classifier** - TensorFlow/Keras model
 - Image size: 224×224 pixels
 - Output: Benign/Malignant classification
-
----
-
-## 📁 Project Structure
-
-```
-Oral-Lesion-Classifier/
-├── backend/
-│   ├── app/
-│   │   ├── core/           # Configuration
-│   │   ├── models/         # Response models
-│   │   └── services/       # Business logic
-│   ├── models/             # ML model files
-│   ├── main.py             # FastAPI entry point
-│   └── requirements.txt    # Python dependencies
-├── frontend/
-│   └── oral-lesion-ui/
-│       ├── src/
-│       │   ├── components/ # Reusable components
-│       │   ├── pages/      # Page components
-│       │   └── services/   # API integration
-│       └── package.json    # Node dependencies
-└── README.md
-```
 
 ---
 
@@ -179,31 +149,6 @@ This academic project demonstrates:
 
 ---
 
-## 👥 Team
-
-- **Person 1** - ML Model Training & Data Processing
-- **Person 2** - Backend Development & API Integration
-- **Person 3** - Frontend Development & UI/UX
-- **Person 4** - Testing, Integration & Documentation
-
----
-
-## ⚠️ Disclaimer
-
-**This is an educational project developed for academic purposes only.**
-
-- Not FDA-approved or clinically validated
-- Not intended for actual medical diagnosis
-- Should not replace professional medical advice
-- Always consult qualified healthcare professionals for medical diagnosis
-
----
-
-## 📝 License
-
-This project is developed for educational purposes as part of academic coursework.
-
----
 
 ## 🐛 Troubleshooting
 
@@ -235,22 +180,5 @@ $env:PORT=3001; npm start
 
 ---
 
-## 📞 Contact
-
-For questions or issues, please contact:
-- Email: your.email@example.com
-- GitHub Issues: [Link to your repo issues]
-
----
-
-## 🙏 Acknowledgments
-
-- TensorFlow/Keras team for the deep learning framework
-- FastAPI developers for the excellent web framework
-- React team for the frontend library
-- Our academic advisors and mentors
-
----
-
-**⭐ If you find this project helpful, please give it a star!**
+r!**
 
