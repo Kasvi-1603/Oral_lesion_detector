@@ -1,18 +1,55 @@
 # Python
 venv/
+env/
 __pycache__/
+*.py[cod]
 *.pyc
+*.pyo
+*.pyd
+.Python
 
-# ML models
-*.h5
-*.pt
-*.onnx
+# ML models (large files - optional, see note below)
+# Uncomment below if model is too large (>100MB)
+# *.h5
+# *.pt
+# *.onnx
 
 # Node
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Environment
+# React build
+frontend/oral-lesion-ui/build/
+frontend/oral-lesion-ui/.env.local
+frontend/oral-lesion-ui/.env.development.local
+frontend/oral-lesion-ui/.env.test.local
+frontend/oral-lesion-ui/.env.production.local
+
+# Environment variables
 .env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
 # OS files
 .DS_Store
+Thumbs.db
+
+# Test images (keep only sample ones)
+*.PNG
+*.png
+*.jpg
+*.jpeg
+
+# Temporary files
+backend/temp-frontend/
+
+# Package locks (optional - can keep package-lock.json)
+# package-lock.json

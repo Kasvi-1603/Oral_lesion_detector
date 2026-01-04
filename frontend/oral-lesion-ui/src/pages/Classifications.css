@@ -1,0 +1,275 @@
+.classifications-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f7fafc, #edf2f7);
+  padding: 4rem 2rem;
+}
+
+.classifications-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.classifications-header h1 {
+  font-size: 3rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.classifications-header p {
+  font-size: 1.3rem;
+  color: #718096;
+  margin-bottom: 1rem;
+}
+
+.model-badge {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.model-badge span {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.info-section {
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.info-section h2 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.info-section p {
+  color: #4a5568;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.classifications-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.classification-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+}
+
+.classification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card-icon {
+  font-size: 3rem;
+}
+
+.card-header h2 {
+  flex: 1;
+  font-size: 2rem;
+  color: #2d3748;
+}
+
+.risk-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.risk-low {
+  background: #d4edda;
+  color: #155724;
+}
+
+.risk-medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.risk-high {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.risk-very-high {
+  background: #dc3545;
+  color: white;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.characteristics {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: #f7fafc;
+  border-radius: 12px;
+}
+
+.characteristics h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.characteristics ul {
+  list-style: none;
+  padding: 0;
+}
+
+.characteristics li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #4a5568;
+}
+
+.characteristics li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.action-box {
+  background: linear-gradient(135deg, #667eea15, #764ba215);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  margin-top: 1.5rem;
+}
+
+.action-box strong {
+  color: #667eea;
+  font-size: 1.1rem;
+}
+
+.action-box p {
+  margin-top: 0.5rem;
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+.cta-section {
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  color: white;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.medical-note {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff3cd;
+  border-radius: 12px;
+  border-left: 4px solid #ffc107;
+}
+
+.medical-note p {
+  color: #856404;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.limitation-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+}
+
+.limitation-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 2rem;
+}
+
+.limitations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.limitation-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  border-top: 4px solid #ffc107;
+}
+
+.limitation-card h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.limitation-card p {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .classifications-header h1 {
+    font-size: 2rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .limitations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

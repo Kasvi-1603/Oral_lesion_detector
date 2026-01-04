@@ -1,0 +1,181 @@
+.about-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f7fafc, #edf2f7);
+  padding: 4rem 2rem;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.about-header p {
+  font-size: 1.3rem;
+  color: #718096;
+  margin-bottom: 1rem;
+}
+
+.project-badge {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.project-badge span {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-section {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+.about-section p {
+  line-height: 1.8;
+  color: #4a5568;
+  font-size: 1.1rem;
+}
+
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tech-item {
+  background: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.tech-item h3 {
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.tech-item p {
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-member {
+  background: #f7fafc;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.member-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.team-member h3 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.team-member p {
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.team-member span {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat-box {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+}
+
+.stat-box h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-box p {
+  color: white;
+  opacity: 0.95;
+}
+
+.disclaimer-section {
+  background: #fff3cd;
+  border: 2px solid #ffc107;
+  border-left: 4px solid #ffc107;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.disclaimer-section h2 {
+  color: #856404;
+  margin-bottom: 1rem;
+}
+
+.disclaimer-section p {
+  color: #856404;
+  line-height: 1.8;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .about-section {
+    padding: 1.5rem;
+  }
+}
+
