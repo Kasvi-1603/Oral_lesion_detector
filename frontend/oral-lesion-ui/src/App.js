@@ -8,6 +8,7 @@ import ForDentists from "./pages/ForDentists";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import Footer from "./components/Footer";
+import SymptomExplanation from './pages/SymptomExplanation';
 import "./App.css";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/for-dentists" element={<ForDentists />} />
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/symptoms" element={<SymptomExplanation />} />
           </Routes>
         </div>
         <Footer />

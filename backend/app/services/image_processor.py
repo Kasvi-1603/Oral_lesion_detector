@@ -39,17 +39,15 @@ class ImageProcessor:
             # Validate image
             self._validate_image(image)
             
-            # Resize image
-            image = image.resize(self.image_size, Image.Resampling.LANCZOS)
+            # Resize image - using default method to match training preprocessing
+            image = image.resize(self.image_size)
             
             # Convert to numpy array
             image_array = np.array(image, dtype=np.float32)
             
-            # Normalize pixel values to [0, 1]
+            # Normalize pixel values to [0, 1] - matching training preprocessing
+            # Training used: ImageDataGenerator(rescale=1./255) with NO ImageNet normalization
             image_array = image_array / 255.0
-            
-            # Apply ImageNet normalization (if using transfer learning)
-            image_array = self._normalize(image_array)
             
             # Add batch dimension
             image_array = np.expand_dims(image_array, axis=0)
@@ -121,5 +119,7 @@ class ImageProcessor:
         # This can be used for test-time augmentation
         # Currently just returns the same image
         return image_array
+
+
 
 

@@ -79,7 +79,7 @@
 .card-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
@@ -90,35 +90,14 @@
 
 .card-header h2 {
   flex: 1;
-  font-size: 2rem;
-  color: #2d3748;
+  font-size: 2.5rem;
 }
 
 .risk-badge {
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 20px;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.risk-low {
-  background: #d4edda;
-  color: #155724;
-}
-
-.risk-medium {
-  background: #fff3cd;
-  color: #856404;
-}
-
-.risk-high {
-  background: #f8d7da;
-  color: #721c24;
-}
-
-.risk-very-high {
-  background: #dc3545;
-  color: white;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 .description {
@@ -166,7 +145,6 @@
   background: linear-gradient(135deg, #667eea15, #764ba215);
   padding: 1.5rem;
   border-radius: 12px;
-  border-left: 4px solid #667eea;
   margin-top: 1.5rem;
 }
 
@@ -178,42 +156,6 @@
 .action-box p {
   margin-top: 0.5rem;
   color: #2d3748;
-  line-height: 1.6;
-}
-
-.cta-section {
-  max-width: 800px;
-  margin: 4rem auto;
-  text-align: center;
-  padding: 3rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 20px;
-  color: white;
-}
-
-.cta-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.cta-section p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  opacity: 0.95;
-}
-
-.medical-note {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  background: #fff3cd;
-  border-radius: 12px;
-  border-left: 4px solid #ffc107;
-}
-
-.medical-note p {
-  color: #856404;
-  margin: 0;
   line-height: 1.6;
 }
 
@@ -254,6 +196,42 @@
   line-height: 1.6;
 }
 
+.cta-section {
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  color: white;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.medical-note {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff3cd;
+  border-radius: 12px;
+  border-left: 4px solid #ffc107;
+}
+
+.medical-note p {
+  color: #856404;
+  margin: 0;
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
   .classifications-header h1 {
     font-size: 2rem;
@@ -265,7 +243,7 @@
   }
 
   .card-header h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .limitations-grid {

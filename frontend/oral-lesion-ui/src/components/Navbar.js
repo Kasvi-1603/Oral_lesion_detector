@@ -9,54 +9,63 @@ function Navbar() {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          <span className="logo-icon">🦷</span>
           Oral Lesion Classifier
         </Link>
+        
         <ul className="nav-menu">
-          <li className="nav-item">
+          <li>
             <Link 
               to="/" 
-              className={location.pathname === "/" ? "nav-link active" : "nav-link"}
+              className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
             >
               Home
             </Link>
           </li>
-          <li className="nav-item">
+          <li>
             <Link 
               to="/analysis" 
-              className={location.pathname === "/analysis" ? "nav-link active" : "nav-link"}
+              className={`nav-link ${location.pathname === '/analysis' ? 'active' : ''}`}
             >
               Analysis
             </Link>
           </li>
-          <li className="nav-item">
+          <li>
             <Link 
               to="/classifications" 
-              className={location.pathname === "/classifications" ? "nav-link active" : "nav-link"}
+              className={`nav-link ${location.pathname === '/classifications' ? 'active' : ''}`}
             >
               Classifications
             </Link>
           </li>
-          <li className="nav-item">
+          <li>
             <Link 
               to="/for-dentists" 
-              className={location.pathname === "/for-dentists" ? "nav-link active" : "nav-link"}
+              className={`nav-link ${location.pathname === '/for-dentists' ? 'active' : ''}`}
             >
               For Dentists
             </Link>
           </li>
-          <li className="nav-item">
+          <li>
             <Link 
               to="/about" 
-              className={location.pathname === "/about" ? "nav-link active" : "nav-link"}
+              className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}
             >
               About
             </Link>
           </li>
-          <li className="nav-item">
+          {/* NEW: Patient Info Button */}
+          <li>
+            <Link 
+              to="/symptoms" 
+              className={`nav-link patient-link ${location.pathname === '/symptoms' ? 'active' : ''}`}
+            >
+              🩺 Patient Info
+            </Link>
+          </li>
+          <li>
             <Link 
               to="/login" 
-              className={location.pathname === "/login" ? "nav-link nav-link-login active" : "nav-link nav-link-login"}
+              className={`nav-link ${location.pathname === '/login' ? 'active' : ''}`}
             >
               Login
             </Link>

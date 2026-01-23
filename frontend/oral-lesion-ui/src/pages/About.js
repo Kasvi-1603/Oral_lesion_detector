@@ -6,22 +6,20 @@ function About() {
     <div className="about-page">
       <div className="about-header fade-in">
         <h1>About This Project</h1>
-        <p>AI-powered oral lesion detection system</p>
+        <p>AI-powered oral lesion detection - College Project</p>
       </div>
 
       <div className="about-container">
-        {/* Project Overview */}
         <section className="about-section slide-in-left">
-          <h2>📋 Project Overview</h2>
+          <h2>📋 Project Report</h2>
           <p>
-            This is a full-stack machine learning application that performs binary classification
-            of oral lesion images. The system uses a trained deep learning model to classify images
-            as either <strong>Benign</strong> (non-cancerous) or <strong>Malignant</strong> (cancerous),
-            demonstrating practical integration of AI models in web applications.
+            This project demonstrates the application of deep learning and computer vision
+            techniques for binary classification of oral lesions. The system classifies
+            oral cavity images as either <strong>Benign</strong> (non-cancerous) or 
+            <strong>Malignant</strong> (cancerous) using a trained TensorFlow model.
           </p>
         </section>
 
-        {/* Technology Stack */}
         <section className="about-section slide-in-right">
           <h2>🔬 Technology Stack</h2>
           <div className="tech-stack">
@@ -31,7 +29,7 @@ function About() {
             </div>
             <div className="tech-item">
               <h3>Frontend</h3>
-              <p>React, React Router, CSS</p>
+              <p>React, Modern CSS</p>
             </div>
             <div className="tech-item">
               <h3>AI Model</h3>
@@ -40,60 +38,57 @@ function About() {
           </div>
         </section>
 
-        {/* Project Objectives */}
         <section className="about-section slide-in-left">
           <h2>🎯 Project Objectives</h2>
           <div className="objectives-list">
             <div className="objective-item">
               <span className="objective-icon">✅</span>
-              <p>Implement full-stack ML application with FastAPI and React</p>
+              <p>Implement a full-stack ML application with FastAPI and React</p>
             </div>
             <div className="objective-item">
               <span className="objective-icon">✅</span>
-              <p>Integrate trained TensorFlow model for binary classification</p>
+              <p>Integrate a trained deep learning model for image classification</p>
             </div>
             <div className="objective-item">
               <span className="objective-icon">✅</span>
-              <p>Design responsive web interface for image analysis</p>
+              <p>Create a professional user interface for medical image analysis</p>
             </div>
             <div className="objective-item">
               <span className="objective-icon">✅</span>
-              <p>Demonstrate REST API and frontend-backend integration</p>
+              <p>Demonstrate REST API design and frontend-backend integration</p>
             </div>
           </div>
         </section>
 
-        {/* Future Scope */}
         <section className="about-section slide-in-right">
-          <h2>🚀 Future Enhancements</h2>
+          <h2>📚 Key Features</h2>
           <ul className="features-list">
-            <li>Multi-class classification for specific lesion types</li>
-            <li>Model explainability with visualization techniques</li>
-            <li>User authentication and prediction history</li>
-            <li>Mobile application development</li>
-            <li>Clinical validation and testing</li>
+            <li>Real-time binary classification of oral lesion images</li>
+            <li>RESTful API with FastAPI framework</li>
+            <li>Multi-page React application with routing</li>
+            <li>Image preprocessing pipeline</li>
+            <li>Confidence score visualization</li>
+            <li>Responsive and modern UI design</li>
           </ul>
         </section>
 
-        {/* Academic Purpose */}
         <section className="about-section slide-in-left">
           <h2>🎓 Academic Purpose</h2>
           <p>
-            This project was developed as part of academic coursework to explore the application
-            of deep learning in medical imaging. It demonstrates technical implementation concepts
-            including machine learning model integration, API development, and modern web application
-            architecture.
+            This project was developed as part of an academic initiative to explore
+            the application of deep learning in medical imaging. It demonstrates the potential
+            of AI to assist in early detection of oral pathologies while highlighting the
+            importance of professional medical oversight.
           </p>
         </section>
 
-        {/* Disclaimer */}
         <section className="disclaimer-section">
           <h2>⚠️ Important Notice</h2>
           <p>
-            This is an <strong>educational project</strong> developed for academic purposes only.
-            The system is not FDA-approved or clinically validated. It should not be used for
-            actual medical diagnosis. Always consult qualified healthcare professionals for
-            medical advice and diagnosis.
+            This tool is designed for <strong>educational and research purposes only</strong>. 
+            It is not FDA-approved and should not be used as the sole basis for medical decisions.
+            Always consult with qualified healthcare professionals for proper diagnosis
+            and treatment of oral lesions.
           </p>
         </section>
       </div>

@@ -11,9 +11,15 @@ function Classifications() {
       description: "Non-cancerous oral lesions and normal tissue",
       characteristics: [
         "No malignant characteristics present",
-        "Includes normal tissue and benign abnormalities",
-        "Non-cancerous growths or inflammatory conditions",
+        "May include normal tissue variations",
+        "Could be non-cancerous abnormalities",
         "Generally lower health risk"
+      ],
+      examples: [
+        "Normal healthy tissue",
+        "Benign ulcers",
+        "Non-cancerous growths",
+        "Inflammatory conditions"
       ],
       risk: "Low",
       color: "#10b981",
@@ -25,10 +31,16 @@ function Classifications() {
       icon: "⚠️",
       description: "Cancerous lesions requiring immediate medical attention",
       characteristics: [
-        "Shows characteristics of cancer or high-risk lesions",
+        "Shows characteristics of cancer",
         "May include oral squamous cell carcinoma",
-        "Advanced pre-cancerous or cancerous growths",
-        "Requires urgent intervention and biopsy"
+        "Potentially aggressive growth patterns",
+        "Requires urgent intervention"
+      ],
+      examples: [
+        "Oral squamous cell carcinoma",
+        "Advanced pre-cancerous lesions",
+        "Cancerous growths",
+        "High-risk lesions"
       ],
       risk: "Very High",
       color: "#ef4444",
@@ -80,6 +92,15 @@ function Classifications() {
               <ul>
                 {item.characteristics.map((char, idx) => (
                   <li key={idx}>{char}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="characteristics">
+              <h3>May Include:</h3>
+              <ul>
+                {item.examples.map((example, idx) => (
+                  <li key={idx}>{example}</li>
                 ))}
               </ul>
             </div>

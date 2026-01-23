@@ -1,0 +1,99 @@
+.symptom-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+}
+
+.symptom-header {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.symptom-header h1 {
+  font-size: 3rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.symptom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+.content-section {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.reassurance-box {
+  border-top: 4px solid #10b981;
+}
+
+.reassurance-highlight {
+  background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.common-symptoms-grid,
+.warning-grid,
+.stories-grid,
+.action-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.symptom-card, .warning-item, .story-card, .step {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.symptom-card.benign {
+  border-left: 4px solid #10b981;
+}
+
+.warning-item.high-priority {
+  border-left: 4px solid #ef4444;
+  background: #fef2f2;
+}
+
+.warning-item {
+  border-left: 4px solid #f59e0b;
+  background: #fffbeb;
+}
+
+.story-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.story-icon.success { background: #d1fae5; color: #059669; }
+.story-icon.monitored { background: #fef3c7; color: #d97706; }
+.story-icon.peace { background: #e0f2fe; color: #0ea5e9; }
+
+.cta-section {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .symptom-header h1 { font-size: 2rem; }
+  .content-section { padding: 1.5rem; }
+}
