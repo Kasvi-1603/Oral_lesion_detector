@@ -9,6 +9,36 @@ from app.core.config import settings
 logger = logging.getLogger(__name__)
 
 
+# Monkey patch to handle TensorFlow version compatibility (quantization_config issue)
+def _patch_layer_config(layer_class):
+    """Patch a layer class to ignore quantization_config in from_config"""
+    original_from_config = layer_class.from_config
+    
+    @classmethod
+    def patched_from_config(cls, config):
+        # Remove quantization_config if present (not supported in older TF versions)
+        if 'quantization_config' in config:
+            config.pop('quantization_config')
+        return original_from_config(config)
+    
+    layer_class.from_config = patched_from_config
+
+
+# Apply patch to common layer types that may have quantization_config
+_layers_to_patch = [
+    tf.keras.layers.Dense,
+    tf.keras.layers.Conv2D,
+    tf.keras.layers.DepthwiseConv2D,
+    tf.keras.layers.SeparableConv2D,
+]
+
+for layer_cls in _layers_to_patch:
+    try:
+        _patch_layer_config(layer_cls)
+    except Exception as e:
+        logger.warning(f"Could not patch {layer_cls.__name__}: {e}")
+
+
 class ModelService:
     """Handles ML model loading and inference"""
     

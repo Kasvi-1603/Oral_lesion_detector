@@ -61,10 +61,10 @@ function ForDentists() {
           <div className="highlight-box">
             <h3>Model Performance Metrics</h3>
             <ul>
-              <li>Overall Accuracy: <strong>92.5%</strong></li>
+              <li>Overall Accuracy: <strong>87%</strong></li>
               <li>Sensitivity: <strong>94.2%</strong></li>
-              <li>Specificity: <strong>91.8%</strong></li>
-              <li>Training Dataset: <strong>10,000 images</strong></li>
+              <li>Specificity: <strong>89%</strong></li>
+              <li>Training Dataset: <strong>1000 images</strong></li>
             </ul>
           </div>
         </section>

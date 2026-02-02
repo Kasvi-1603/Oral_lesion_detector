@@ -30,13 +30,10 @@ class Settings(BaseSettings):
     IMAGE_SIZE: tuple = (224, 224)
     IMAGE_CHANNELS: int = 3
     
-    # Class Names (Update these based on your actual classes)
+    # Class Names - Binary Classification Model
     CLASS_NAMES: List[str] = [
-        "Normal",
-        "Leukoplakia",
-        "Erythroplakia",
-        "Ulcer",
-        "Oral Squamous Cell Carcinoma"
+        "Benign",
+        "Malignant"
     ]
     
     # Preprocessing Settings
